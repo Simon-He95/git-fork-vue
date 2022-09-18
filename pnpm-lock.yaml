@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@antfu/eslint-config': ^0.25.2
-      '@simon_he/git-fork': workspace:^0.0.2
+      '@simon_he/git-fork': workspace:^0.0.4
       '@types/node': ^17.0.38
       '@vitejs/plugin-vue': ^3.0.1
       '@vitejs/plugin-vue-jsx': ^2.0.0

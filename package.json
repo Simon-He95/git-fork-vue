@@ -19,12 +19,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
+      "require": "./dist/index.umd.js",
       "import": "./dist/index.mjs"
     }
   },
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.umd.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
-    "@simon_he/git-fork": "workspace:^0.0.2",
+    "@simon_he/git-fork": "workspace:^0.0.4",
     "@types/node": "^17.0.38",
     "@vitejs/plugin-vue": "^3.0.1",
     "@vitejs/plugin-vue-jsx": "^2.0.0",
