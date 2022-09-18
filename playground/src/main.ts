@@ -1,9 +1,8 @@
-// @unocss-include
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import routes from 'virtual:generated-pages'
-import { gitFork } from '../../dist'
-// import { gitFork } from '../../src'
+// import { gitFork } from '../../dist'
+import { gitFork } from '../../dist/index'
 import App from './App.vue'
 
 import '@unocss/reset/tailwind.css'

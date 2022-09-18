@@ -4,6 +4,8 @@ import { defineConfig } from 'vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import { vitePluginLibInsertUnocss } from 'vite-plugin-lib-insert-unocss'
+import Unocss from 'unocss/vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   build: {
@@ -26,7 +28,9 @@ export default defineConfig({
   plugins: [
     cssInjectedByJsPlugin(),
     vueJsx(),
-    vitePluginLibInsertUnocss()
+    vitePluginLibInsertUnocss(),
+    Unocss(),
+    dts()
   ]
 })
 
