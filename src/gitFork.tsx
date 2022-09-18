@@ -1,6 +1,5 @@
 import { DefineComponent } from 'vue'
 import { defineComponent } from 'vue'
-// import './index.css'
 import { Props } from './types'
 import './index.css'
 export const gitFork = defineComponent({

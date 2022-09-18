@@ -3,7 +3,6 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
-import fs from 'fs'
 import { vitePluginLibInsertUnocss } from 'vite-plugin-lib-insert-unocss'
 
 export default defineConfig({
@@ -25,7 +24,7 @@ export default defineConfig({
     }
   },
   plugins: [
-    cssInjectedByJsPlugin({ styleId: "foo" }),
+    cssInjectedByJsPlugin(),
     vueJsx(),
     vitePluginLibInsertUnocss()
   ]
