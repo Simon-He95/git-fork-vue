@@ -11,11 +11,19 @@ export interface Props {
   link: string ## GitHub地址
   position: 'left' | 'right' ## 组件位置
   content: string ## 组件内容
-  color: string ## 组件颜色
+  color: string ## 组件背景颜色
   type: 'corners' | 'ribbons' ## 提供2种类型的组件
 }
 ```
 
+## 使用
+```html
+ <git-fork
+      link="https://github.com/Simon-He95"
+      type="ribbons"
+      position="left"
+    />
+```
 
 ## :tea: 
 [请我喝一杯咖啡](https://github.com/Simon-He95/sponsor)
@@ -26,5 +34,5 @@ export interface Props {
 [issues](https://github.com/Simon-He95/git-fork/issues)
 
 ## 依赖
-`vue`
+`vue`、`vite-plugin-inspector-lib-css`
 
