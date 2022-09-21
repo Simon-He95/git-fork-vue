@@ -34,5 +34,5 @@ export interface Props {
 [issues](https://github.com/Simon-He95/git-fork/issues)
 
 ## 依赖
-`vue`、`vite-plugin-inspector-lib-css`
+`vue`、[`vite-plugin-inspector-lib-css`](https://github.com/Simon-He95/vite-plugin-Inspector-lib-css)
 
