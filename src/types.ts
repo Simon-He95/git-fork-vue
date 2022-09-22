@@ -3,5 +3,5 @@ export interface Props {
   position: 'left' | 'right'
   content: string
   color: string
-  type: 'corners' | 'ribbons'
+  type: 'corners' | 'ribbons' | 'trapeziumType'
 }

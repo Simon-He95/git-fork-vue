@@ -12,7 +12,7 @@ export interface Props {
   position: 'left' | 'right' ## 组件位置
   content: string ## 组件内容
   color: string ## 组件背景颜色
-  type: 'corners' | 'ribbons' ## 提供2种类型的组件
+  type: 'corners' | 'ribbons' | 'trapeziumType' ## 提供3种类型的组件
 }
 ```
 

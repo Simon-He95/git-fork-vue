@@ -1,5 +1,4 @@
 // @unocss-include
-
 import { DefineComponent } from 'vue'
 import { defineComponent } from 'vue'
 import { Props } from './types'
@@ -31,13 +30,15 @@ export const gitFork = defineComponent({
   setup(props: any) {
     return props.type === 'corners'
       ? cornersType(props)
-      : ribbonsType(props)
+      : props.type === 'ribbons'
+        ? ribbonsType(props)
+        : trapeziumType(props)
   },
 }) as DefineComponent<Props>
 
 
 function ribbonsType(props: Props) {
-  return props.position === 'right' ? () => (
+  return () => props.position === 'right' ? (
     <a
       id="gitFork"
       href={props.link}
@@ -65,7 +66,7 @@ function ribbonsType(props: Props) {
       <span class="pointer-events-none">{props.content}</span>
     </a>
   )
-    : () => (
+    : (
       <a
         id="gitFork"
         href={props.link}
@@ -107,12 +108,12 @@ function ribbonsType(props: Props) {
 }
 
 function cornersType(props: Props) {
-  return props.position === 'right'
-    ? () => (
+  return () => props.position === 'right'
+    ? (
       <a
         id="gitFork"
-        class="fixed top-0 right-0 border-0 z-10"
-        href={props.link} class='github-corner' aria-label="View source on GitHub">
+        class="fixed top-0 right-0 border-0 z-10 github-corner"
+        href={props.link} aria-label="View source on GitHub">
         <svg width="80" height="80" viewBox="0 0 250 250"
           style={{
             fill: props.color,
@@ -127,11 +128,11 @@ function cornersType(props: Props) {
         </svg>
       </a>
     )
-    : () => (
+    : (
       <a
         id="gitFork"
-        class="fixed top-0 right-0 border-0 z-10"
-        href={props.link} class="github-corner" aria-label="View source on GitHub">
+        class="fixed top-0 right-0 border-0 z-10 github-corner"
+        href={props.link} aria-label="View source on GitHub">
         <svg width="80" height="80" viewBox="0 0 250 250"
           style={{
             fill: props.color,
@@ -148,4 +149,45 @@ function cornersType(props: Props) {
     )
 }
 
+function trapeziumType(props: Props) {
+  return () => props.position === 'right'
+    ? (
+      <a href={props.link} class="fixed top-0 right-0 w-40 h-40 bg-transparent">
+        <div
+          class=" h-10 flex items-center justify-center text-5 rotate-y-10 box-border py1 text-white font-sans "
+          style={{
+            width: '150%',
+            transform: "translate3d(-10%, 120%, 0) rotate(45deg)",
+            '-webkit-font-smoothing': "antialiased",
+            '-moz-osx-font-smoothing': "grayscale"
+          }}        >
+          <div style={{
+            width: '150%',
+            border: '0.5rem double white',
+            background: props.color
+          }} >Fork me on GitHub</div>
+        </div>
+      </a>
+    )
+    : (
+      <a href={props.link} class="fixed top-0 left-0 w-40 h-40 bg-transparent">
+        <div
+          class="h-10 flex items-center  justify-center text-5 rotate-y-10 box-border py1 text-white font-sans"
+
+          style={{
+            width: '150%',
+            transform: "translate3d(-21%, 117%, 0) rotate(-45deg)",
+            '-webkit-font-smoothing': "antialiased",
+            '-moz-osx-font-smoothing': "grayscale"
+          }}
+        >
+          <div style={{
+            width: '150%',
+            border: '0.5rem double white',
+            background: props.color
+          }} >Fork me on GitHub</div>
+        </div>
+      </a>
+    )
+}
 
