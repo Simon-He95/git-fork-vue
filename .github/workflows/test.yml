@@ -11,11 +11,27 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    timeout-minutes: 10
+
+    strategy:
+      matrix:
+        node_version: [14.x, 16.x]
+        os: [ubuntu-latest, windows-latest]
+      fail-fast: false
+
     steps:
       - uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      - name: Set node version to ${{ matrix.node_version }}
+        uses: actions/setup-node@v2
         with:
-          fetch-depth: 0
+          node-version: ${{ matrix.node_version }}
+          cache: pnpm
 
       - name: Install
         run: pnpm i
@@ -31,7 +47,6 @@ jobs:
 
       - name: TypeCheck
         run: pnpm run typecheck
-
       - run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
