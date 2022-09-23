@@ -42,8 +42,6 @@ jobs:
       - name: Test
         run: pnpm run test
 
-      - name: TypeCheck
-        run: pnpm run typecheck
       - run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
