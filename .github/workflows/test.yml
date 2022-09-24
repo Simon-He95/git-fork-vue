@@ -9,6 +9,10 @@ on:
     branches:
       - master
 
+env:
+  NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+  GITHUB_TOKEN: ${{ secrets.CUSTOM_GH_TOKEN }}
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -43,5 +47,4 @@ jobs:
         run: pnpm run test
 
       - run: npx changelogithub
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
