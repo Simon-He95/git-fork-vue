@@ -1,4 +1,14 @@
-## @simon_he/git-fork
+<center><a href="https://git-fork.vercel.app/" align-center>
+<img width=200 src="https://octodex.github.com/images/daftpunktocat-thomas.gif"/>
+</a>
+</center>
+
+<center>
+<h2>@simon_he/git-fork</h2>
+<a href="https://www.npmjs.com/package/git-fork"><img src="https://img.shields.io/npm/dm/git-fork?style=social" alt="NPM version"></a>
+<a href="https://github.com/Simon-He95/git-fork"><img src="https://img.shields.io/github/stars/Simon-He95/git-fork?style=social" alt="NPM version"></a>
+</center>
+
 提供一个跳转到GitHub地址的小组件
 
 ## 灵感来源
@@ -33,5 +43,5 @@ export interface Props {
 [issues](https://github.com/Simon-He95/git-fork/issues)
 
 ## 依赖
-`vue`、[`vite-plugin-inspector-lib-css`](https://github.com/Simon-He95/vite-plugin-Inspector-lib-css)
+`vue`、`unocss`、[`vite-plugin-inspector-lib-css`](https://github.com/Simon-He95/vite-plugin-Inspector-lib-css)
 
