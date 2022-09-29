@@ -3,7 +3,7 @@ import { DefineComponent } from 'vue'
 import { defineComponent } from 'vue'
 import { Props } from './types'
 import './index.css'
-const gitFork = defineComponent({
+export const gitFork = defineComponent({
   name: 'Component',
   props: {
     link: {
@@ -192,4 +192,3 @@ function trapeziumType(props: Props) {
     )
 }
 
-export default gitFork
