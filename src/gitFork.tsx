@@ -25,6 +25,10 @@ export const gitFork = defineComponent({
     type: {
       type: String,
       default: 'corners'
+    },
+    top: {
+      type: String,
+      default: '30px'
     }
   },
   setup(props: any) {
@@ -44,10 +48,10 @@ function ribbonsType(props: Props) {
       href={props.link}
       onMouseover={e => mouseover(e, 'right')}
       onMouseout={e => mouseout(e, 'right')}
-      class="fixed"
+      class="fixed z-1"
       style={{
         backgroundColor: props.color,
-        top: '30px',
+        top: props.top,
         right: '-103px',
         margin: '0',
         fontFamily: 'Helvetica,Arial,sans-serif',
@@ -72,10 +76,10 @@ function ribbonsType(props: Props) {
         href={props.link}
         onMouseover={e => mouseover(e, 'left')}
         onMouseout={e => mouseout(e, 'left')}
-        class="fixed"
+        class="fixed z-1"
         style={{
           backgroundColor: props.color,
-          top: '30px',
+          top: props.top,
           left: '-103px',
           margin: '0',
           fontFamily: 'Helvetica,Arial,sans-serif',
@@ -112,7 +116,7 @@ function cornersType(props: Props) {
     ? (
       <a
         id="gitFork"
-        class="fixed top-0 right-0 border-0 z-10 github-corner"
+        class="fixed top-0 z-1 right-0 border-0 z-10 github-corner"
         href={props.link} aria-label="View source on GitHub">
         <svg width="80" height="80" viewBox="0 0 250 250"
           style={{
@@ -131,7 +135,7 @@ function cornersType(props: Props) {
     : (
       <a
         id="gitFork"
-        class="fixed top-0 right-0 border-0 z-10 github-corner"
+        class="fixed top-0 z-1 left-0 border-0 z-10 github-corner"
         href={props.link} aria-label="View source on GitHub">
         <svg width="80" height="80" viewBox="0 0 250 250"
           style={{
@@ -152,7 +156,7 @@ function cornersType(props: Props) {
 function trapeziumType(props: Props) {
   return () => props.position === 'right'
     ? (
-      <a href={props.link} class="fixed top-0 right-0 w-40 h-40 bg-transparent">
+      <a href={props.link} class="fixed z-1 top-0 right-0 w-40 h-40 bg-transparent">
         <div
           class=" h-10 flex items-center justify-center text-5 rotate-y-10 box-border py1 text-white font-sans "
           style={{

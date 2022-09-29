@@ -4,4 +4,5 @@ export interface Props {
   content: string
   color: string
   type: 'corners' | 'ribbons' | 'trapeziumType'
+  top?: string
 }
