@@ -1,14 +1,15 @@
-<center><a href="https://git-fork.vercel.app/" align-center>
+<div align="center"><a href="https://git-fork.vercel.app/" >
 <img width=200 src="https://octodex.github.com/images/daftpunktocat-thomas.gif"/>
 </a>
-</center>
+</div>
 
-<center>
+<div  align="center">
 <h2>@simon_he/git-fork</h2>
 <a href="https://www.npmjs.com/package/git-fork"><img src="https://img.shields.io/npm/dm/git-fork?style=social" alt="NPM version"></a>
 <a href="https://github.com/Simon-He95/git-fork"><img src="https://img.shields.io/github/stars/Simon-He95/git-fork?style=social" alt="NPM version"></a>
-</center>
+</div>
 
+## 目的
 提供一个跳转到GitHub地址的小组件
 
 ## 灵感来源
