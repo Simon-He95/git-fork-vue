@@ -27,6 +27,12 @@ export interface Props {
 }
 ```
 
+## 引入
+```js
+import gitFork from "@simon_he/git-fork";
+
+```
+
 ## 使用
 ```html
  <git-fork

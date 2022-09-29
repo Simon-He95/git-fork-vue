@@ -1,2 +1,2 @@
-export { gitFork } from './gitFork'
+export * from './gitFork'
 export * from './types'

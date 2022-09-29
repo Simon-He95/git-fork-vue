@@ -3,7 +3,7 @@ import { DefineComponent } from 'vue'
 import { defineComponent } from 'vue'
 import { Props } from './types'
 import './index.css'
-export const gitFork = defineComponent({
+const gitFork = defineComponent({
   name: 'Component',
   props: {
     link: {
@@ -159,12 +159,13 @@ function trapeziumType(props: Props) {
             width: '150%',
             transform: "translate3d(-10%, 120%, 0) rotate(45deg)",
             '-webkit-font-smoothing': "antialiased",
-            '-moz-osx-font-smoothing': "grayscale"
+            '-moz-osx-font-smoothing': "grayscale",
+            textAlign: 'center'
           }}        >
           <div style={{
             width: '150%',
             border: '0.5rem double white',
-            background: props.color
+            background: props.color,
           }} >Fork me on GitHub</div>
         </div>
       </a>
@@ -191,3 +192,4 @@ function trapeziumType(props: Props) {
     )
 }
 
+export default gitFork
