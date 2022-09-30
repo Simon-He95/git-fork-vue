@@ -12,7 +12,7 @@
       type="ribbons"
       position="left"
     />
-
+    <Foo />
     <router-view />
     <Footer />
   </main>
