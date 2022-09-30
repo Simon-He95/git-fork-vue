@@ -29,7 +29,7 @@ export interface Props {
 
 ## 引入
 ```js
-import gitForkVue from "@simon_he/git-fork";
+import gitForkVue from "@simon_he/git-fork-vue";
 
 ```
 

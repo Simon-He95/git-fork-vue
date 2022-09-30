@@ -7,13 +7,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git + git@github.com:Simon-He95/git-fork.git"
+    "url": "git + git@github.com:Simon-He95/git-fork-vue.git"
   },
   "bugs": {
-    "url": "https://github.com/Simon-He95/git-fork/issues"
+    "url": "https://github.com/Simon-He95/git-fork-vue/issues"
   },
   "keywords": [
-    "git-fork",
+    "git-fork-vue",
     "vue"
   ],
   "exports": {
