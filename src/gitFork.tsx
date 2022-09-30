@@ -1,9 +1,10 @@
 // @unocss-include
 import { DefineComponent } from 'vue'
 import { defineComponent } from 'vue'
+
 import { Props } from './types'
 import './index.css'
-export const gitFork = defineComponent({
+export const gitForkVue = defineComponent({
   name: 'Component',
   props: {
     link: {
@@ -175,7 +176,7 @@ function trapeziumType(props: Props) {
       </a>
     )
     : (
-      <a href={props.link} class="fixed top-0 left-0 w-40 h-40 bg-transparent">
+      <a href={props.link} class="fixed top-0 left-0 w-40 h-40 bg-transparent text-center">
         <div
           class="h-10 flex items-center  justify-center text-5 rotate-y-10 box-border py1 text-white font-sans"
 
@@ -195,4 +196,5 @@ function trapeziumType(props: Props) {
       </a>
     )
 }
+
 

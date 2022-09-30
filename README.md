@@ -10,7 +10,7 @@
 </div>
 
 ## 目的
-提供一个跳转到GitHub地址的小组件
+提供一个跳转到GitHub地址的小组件 
 
 ## 灵感来源
 - [github-corners](https://tholman.com/github-corners/)
@@ -29,13 +29,13 @@ export interface Props {
 
 ## 引入
 ```js
-import gitFork from "@simon_he/git-fork";
+import gitForkVue from "@simon_he/git-fork";
 
 ```
 
 ## 使用
 ```html
- <git-fork
+<gitForkVue
       link="https://github.com/Simon-He95"
       type="ribbons"
       position="left"

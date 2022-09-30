@@ -1,3 +1,3 @@
-import { gitFork } from './gitFork'
+import { gitForkVue } from './gitFork'
 export * from './types'
-export default gitFork
+export default gitForkVue

@@ -17,3 +17,11 @@
     <Footer />
   </main>
 </template>
+
+<script setup lang="ts">
+import index from "./pages/index.vue";
+console.log(index);
+</script>
+
+<style scoped>
+</style>
