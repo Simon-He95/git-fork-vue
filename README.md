@@ -47,7 +47,7 @@ import gitForkVue from "@simon_he/git-fork-vue";
 
 
 ## :question: 问题
-[issues](https://github.com/Simon-He95/git-fork/issues)
+[issues](https://github.com/Simon-He95/git-fork-vue/issues)
 
 ## 依赖
 `vue`、`unocss`、[`vite-plugin-inspector-lib-css`](https://github.com/Simon-He95/vite-plugin-Inspector-lib-css)
