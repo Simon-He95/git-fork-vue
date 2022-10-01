@@ -5,7 +5,7 @@
 
 <div  align="center">
 <h2>@simon_he/git-fork-vue</h2>
-<a href="https://www.npmjs.com/package/git-fork-vue"><img src="https://img.shields.io/npm/dm/git-fork-vue?style=social" alt="NPM version"></a>
+<a href="https://www.npmjs.com/package/@simon_he/git-fork-vue"><img src="https://img.shields.io/npm/dm/@simon_he/git-fork-vue?style=social" alt="NPM version"></a>
 <a href="https://github.com/Simon-He95/git-fork-vue"><img src="https://img.shields.io/github/stars/Simon-He95/git-fork-vue?style=social" alt="NPM version"></a>
 </div>
 
