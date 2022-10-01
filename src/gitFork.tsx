@@ -117,7 +117,7 @@ function cornersType(props: Props) {
     ? (
       <a
         id="gitFork"
-        class="fixed top-0 z-1 right-0 border-0 z-10 github-corner"
+        class="fixed top-0 z-1 right-0 border-0 z-1 github-corner"
         href={props.link} aria-label="View source on GitHub">
         <svg width="80" height="80" viewBox="0 0 250 250"
           style={{
@@ -136,7 +136,7 @@ function cornersType(props: Props) {
     : (
       <a
         id="gitFork"
-        class="fixed top-0 z-1 left-0 border-0 z-10 github-corner"
+        class="fixed top-0 z-1 left-0 border-0 z-1 github-corner"
         href={props.link} aria-label="View source on GitHub">
         <svg width="80" height="80" viewBox="0 0 250 250"
           style={{
@@ -157,9 +157,10 @@ function cornersType(props: Props) {
 function trapeziumType(props: Props) {
   return () => props.position === 'right'
     ? (
-      <a href={props.link} class="fixed z-1 top-0 right-0 w-40 h-40 bg-transparent">
+      <a href={props.link} class="fixed z-2 top-0 right-0 w-40 h-40 bg-transparent" >
         <div
-          class=" h-10 flex items-center justify-center text-5 rotate-y-10 box-border py1 text-white font-sans "
+          hover="text-shadow-md text-shadow-color-light"
+          class=" h-10 flex items-center justify-center text-5 rotate-y-10 box-border py1 text-white font-sans"
           style={{
             width: '150%',
             transform: "translate3d(-10%, 120%, 0) rotate(45deg)",
@@ -171,15 +172,17 @@ function trapeziumType(props: Props) {
             width: '150%',
             border: '0.5rem double white',
             background: props.color,
-          }} >Fork me on GitHub</div>
+          }}
+            pointer-events-none
+          >Fork me on GitHub</div>
         </div>
       </a>
     )
     : (
-      <a href={props.link} class="fixed top-0 left-0 w-40 h-40 bg-transparent text-center">
+      <a href={props.link} class="fixed top-0 z-2 left-0 w-40 h-40 bg-transparent text-center">
         <div
+          hover="text-shadow-md text-shadow-color-light"
           class="h-10 flex items-center  justify-center text-5 rotate-y-10 box-border py1 text-white font-sans"
-
           style={{
             width: '150%',
             transform: "translate3d(-21%, 117%, 0) rotate(-45deg)",
