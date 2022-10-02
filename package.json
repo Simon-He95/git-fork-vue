@@ -31,8 +31,7 @@
   ],
   "scripts": {
     "build": "vite build",
-    "dev": "pkgroll --watch",
-    "play": "pnpm run -C playground dev",
+    "dev": "pnpm run -C playground dev",
     "play:build": "pnpm run -C playground build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",

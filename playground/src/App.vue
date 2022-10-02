@@ -6,11 +6,12 @@
       position="right"
       color="red"
     />
-    <git-fork link="https://github.com/Simon-He95" position="right" />
+    <git-fork link="https://github.com/Simon-He95" position="left" />
     <git-fork
       link="https://github.com/Simon-He95"
       type="ribbons"
       position="left"
+      top="100px"
     />
     <Foo />
     <router-view />
@@ -18,10 +19,4 @@
   </main>
 </template>
 
-<script setup lang="ts">
-import index from "./pages/index.vue";
-console.log(index);
-</script>
 
-<style scoped>
-</style>
