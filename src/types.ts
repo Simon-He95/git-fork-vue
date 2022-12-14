@@ -1,8 +1,8 @@
 export interface Props {
-  link: string
-  position: 'left' | 'right'
+  link?: string
+  position?: 'left' | 'right'
   content: string
-  color: string
-  type: 'corners' | 'ribbons' | 'trapeziumType'
+  color?: string
+  type?: 'corners' | 'ribbons' | 'trapeziumType'
   top?: string
 }

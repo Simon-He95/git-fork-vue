@@ -1,6 +1,6 @@
 // @unocss-include
-import { DefineComponent } from 'vue'
-import { defineComponent } from 'vue'
+import type { DefineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
 
 import { Props } from './types'
 import './index.css'
@@ -12,7 +12,7 @@ export const gitForkVue = defineComponent({
       default: '',
     },
     position: {
-      type: String,
+      type: String as PropType<'left' | 'right'>,
       default: 'right'
     },
     content: {
@@ -24,12 +24,12 @@ export const gitForkVue = defineComponent({
       default: '#151513'
     },
     type: {
-      type: String,
+      type: String as PropType<'corners' | 'ribbons' | 'trapezium'>,
       default: 'corners'
     },
     top: {
-      type: String,
-      default: '30px'
+      type: [Number, String],
+      default: 30
     }
   },
   setup(props: any) {
@@ -52,7 +52,7 @@ function ribbonsType(props: Props) {
       class="fixed z-1"
       style={{
         backgroundColor: props.color,
-        top: props.top,
+        top: String(props.top)?.replace('px', '') + 'px',
         right: '-103px',
         margin: '0',
         fontFamily: 'Helvetica,Arial,sans-serif',
@@ -80,7 +80,7 @@ function ribbonsType(props: Props) {
         class="fixed z-1"
         style={{
           backgroundColor: props.color,
-          top: props.top,
+          top: String(props.top)?.replace('px', '') + 'px',
           left: '-103px',
           margin: '0',
           fontFamily: 'Helvetica,Arial,sans-serif',
