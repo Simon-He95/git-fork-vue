@@ -53,7 +53,7 @@ function ribbonsType(props: Props) {
       style={{
         backgroundColor: props.color,
         top: String(props.top)?.replace('px', '') + 'px',
-        right: '-103px',
+        right: '-75px',
         margin: '0',
         fontFamily: 'Helvetica,Arial,sans-serif',
         fontSize: '24px',
@@ -68,7 +68,7 @@ function ribbonsType(props: Props) {
       <svg width="41" height="41" viewBox="0 0 41 41" fill="#fff" style="vertical-align:middle;margin-right:15px;" class="pointer-events-none">
         <path d="M0 20.48c0 9.04 5.742 16.72 13.672 19.44 1.016.2 1.367-.44 1.367-1 0-.48 0-2.12-.039-3.8-5.547 1.24-6.719-2.4-6.719-2.4-.898-2.36-2.227-3-2.227-3-1.836-1.28.156-1.24.156-1.24 1.992.16 3.047 2.12 3.047 2.12 1.797 3.12 4.688 2.24 5.82 1.72.195-1.32.703-2.24 1.289-2.72-4.453-.52-9.102-2.28-9.102-10.12 0-2.24.781-4.08 2.07-5.48-.195-.52-.898-2.6.195-5.44 0 0 1.68-.56 5.508 2.12 1.602-.44 3.32-.68 5-.68 1.719 0 3.398.24 5 .68 3.828-2.64 5.508-2.12 5.508-2.12 1.094 2.84.391 4.92.195 5.44 1.289 1.44 2.07 3.24 2.07 5.48 0 7.88-4.688 9.6-9.141 10.12.703.64 1.367 1.88 1.367 3.8 0 2.72-.039 4.96-.039 5.64 0 .56.352 1.2 1.367 1 7.93-2.72 13.672-10.4 13.672-19.44 0-11.32-8.984-20.6-20.039-20.6-11.055 0-20 9.16-20 20.48z" />
       </svg>
-      <span class="pointer-events-none">{props.content}</span>
+      <span class="pointer-events-none">{props.content || 'Fork me'}</span>
     </a>
   )
     : (
@@ -92,7 +92,7 @@ function ribbonsType(props: Props) {
           color: '#fff'
         }}
       >
-        <span class="pointer-events-none">Fork me</span>
+        <span class="pointer-events-none">{props.content || 'Fork me'}</span>
         <svg class="pointer-events-none" width="41" height="41" viewBox="0 0 41 41" fill="#fff" style="vertical-align:middle;margin-left:15px;">
           <path d="M0 20.48c0 9.04 5.742 16.72 13.672 19.44 1.016.2 1.367-.44 1.367-1 0-.48 0-2.12-.039-3.8-5.547 1.24-6.719-2.4-6.719-2.4-.898-2.36-2.227-3-2.227-3-1.836-1.28.156-1.24.156-1.24 1.992.16 3.047 2.12 3.047 2.12 1.797 3.12 4.688 2.24 5.82 1.72.195-1.32.703-2.24 1.289-2.72-4.453-.52-9.102-2.28-9.102-10.12 0-2.24.781-4.08 2.07-5.48-.195-.52-.898-2.6.195-5.44 0 0 1.68-.56 5.508 2.12 1.602-.44 3.32-.68 5-.68 1.719 0 3.398.24 5 .68 3.828-2.64 5.508-2.12 5.508-2.12 1.094 2.84.391 4.92.195 5.44 1.289 1.44 2.07 3.24 2.07 5.48 0 7.88-4.688 9.6-9.141 10.12.703.64 1.367 1.88 1.367 3.8 0 2.72-.039 4.96-.039 5.64 0 .56.352 1.2 1.367 1 7.93-2.72 13.672-10.4 13.672-19.44 0-11.32-8.984-20.6-20.039-20.6-11.055 0-20 9.16-20 20.48z" />
         </svg>
@@ -107,8 +107,8 @@ function ribbonsType(props: Props) {
   }
   function mouseout(e: MouseEvent, type: 'left' | 'right') {
     const el = e.target as HTMLElement
-    if (el)
-      el.style[type] = '-103px'
+    if (!el)return
+      el.style[type] = type==='right'? '-75px' : '-103px'
   }
 }
 
@@ -159,8 +159,8 @@ function trapeziumType(props: Props) {
     ? (
       <a href={props.link} class="fixed z-2 top-0 right-0 w-40 h-40 bg-transparent" >
         <div
+          class="h-10 flex items-center justify-center text-5 rotate-y-10 box-border py1 text-white font-sans transition-all-200"
           hover="text-shadow-md text-shadow-color-light"
-          class=" h-10 flex items-center justify-center text-5 rotate-y-10 box-border py1 text-white font-sans"
           style={{
             width: '150%',
             transform: "translate3d(-10%, 120%, 0) rotate(45deg)",
@@ -174,7 +174,7 @@ function trapeziumType(props: Props) {
             background: props.color,
           }}
             pointer-events-none
-          >Fork me on GitHub</div>
+          >{props.content||'Fork me on GitHub'}</div>
         </div>
       </a>
     )
@@ -182,7 +182,7 @@ function trapeziumType(props: Props) {
       <a href={props.link} class="fixed top-0 z-2 left-0 w-40 h-40 bg-transparent text-center">
         <div
           hover="text-shadow-md text-shadow-color-light"
-          class="h-10 flex items-center  justify-center text-5 rotate-y-10 box-border py1 text-white font-sans"
+          class="h-10 flex items-center  justify-center text-5 rotate-y-10 box-border py1 text-white font-sans transition-all-200"
           style={{
             width: '150%',
             transform: "translate3d(-21%, 117%, 0) rotate(-45deg)",
@@ -194,7 +194,7 @@ function trapeziumType(props: Props) {
             width: '150%',
             border: '0.5rem double white',
             background: props.color
-          }} >Fork me on GitHub</div>
+          }} >{props.content||'Fork me on GitHub'}</div>
         </div>
       </a>
     )

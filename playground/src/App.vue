@@ -6,6 +6,7 @@
       link="https://github.com/Simon-He95"
       type="trapeziumType"
       position="right"
+      content="nihao ya"
       color="red"
     />
     <git-fork link="https://github.com/Simon-He95" position="left" />
@@ -13,7 +14,14 @@
       link="https://github.com/Simon-He95"
       type="ribbons"
       position="left"
-      top="100"
+      top="150"
+      content="nihaoa"
+    />
+    <git-fork
+      link="https://github.com/Simon-He95"
+      type="ribbons"
+      content="nihao"
+      z-10
     />
     <router-view />
     <Footer />

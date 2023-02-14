@@ -1,7 +1,7 @@
 export interface Props {
   link?: string
   position?: 'left' | 'right'
-  content: string
+  content?: string
   color?: string
   type?: 'corners' | 'ribbons' | 'trapeziumType'
   top?: string
