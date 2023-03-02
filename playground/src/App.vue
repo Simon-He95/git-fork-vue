@@ -17,10 +17,13 @@
       top="150"
       content="nihaoa"
     />
+  
     <git-fork
       link="https://github.com/Simon-He95"
       type="ribbons"
       content="nihao"
+      position="right"
+      bottom="200px"
       z-10
     />
     <router-view />

@@ -29,7 +29,11 @@ export const gitForkVue = defineComponent({
     },
     top: {
       type: [Number, String],
-      default: 30
+      default: ''
+    },
+    bottom: {
+      type: [Number, String],
+      default: ''
     }
   },
   setup(props: any) {
@@ -49,17 +53,19 @@ function ribbonsType(props: Props) {
       href={props.link}
       onMouseover={e => mouseover(e, 'right')}
       onMouseout={e => mouseout(e, 'right')}
-      class="fixed z-1"
+      class="fixed z-1 flex items-center"
       style={{
         backgroundColor: props.color,
         top: String(props.top)?.replace('px', '') + 'px',
-        right: '-75px',
+        bottom: String(props.bottom)?.replace('px', '') + 'px',
+        left:'100%',
+        transform:'translateX(-57px)',
         margin: '0',
         fontFamily: 'Helvetica,Arial,sans-serif',
         fontSize: '24px',
         padding: '10px 15px',
         borderRadius: '0 2px 2px 0',
-        transition: 'right .4s ease',
+        transition: 'transform .4s ease',
         textDecoration: 'none',
         color: '#fff'
       }}
@@ -77,11 +83,12 @@ function ribbonsType(props: Props) {
         href={props.link}
         onMouseover={e => mouseover(e, 'left')}
         onMouseout={e => mouseout(e, 'left')}
-        class="fixed z-1"
+        class="fixed z-1 flex items-center"
         style={{
           backgroundColor: props.color,
           top: String(props.top)?.replace('px', '') + 'px',
-          left: '-103px',
+          bottom: String(props.bottom)?.replace('px', '') + 'px',
+          left: '-100px',
           margin: '0',
           fontFamily: 'Helvetica,Arial,sans-serif',
           fontSize: '24px',
@@ -101,14 +108,21 @@ function ribbonsType(props: Props) {
 
   function mouseover(e: MouseEvent, type: 'left' | 'right') {
     const el = e.target as HTMLElement
-    if (el)
-      el.style[type] = '0'
+    if (!el) return
 
+    if(type === 'right')
+      el.style['transform'] = 'translateX(-100%)'
+    else 
+      el.style[type] = '0'
   }
   function mouseout(e: MouseEvent, type: 'left' | 'right') {
     const el = e.target as HTMLElement
-    if (!el)return
-      el.style[type] = type==='right'? '-75px' : '-103px'
+    if (!el) return
+
+    if(type==='right')
+      el.style['transform'] = 'translateX(-56px)'
+    else
+      el.style[type] = '-103px'
   }
 }
 
