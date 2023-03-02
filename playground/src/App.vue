@@ -15,7 +15,7 @@
       type="ribbons"
       position="left"
       top="150"
-      content="nihaoa"
+      content="Fork Me"
     />
   
     <git-fork

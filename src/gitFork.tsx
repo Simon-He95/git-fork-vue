@@ -59,7 +59,7 @@ function ribbonsType(props: Props) {
         top: String(props.top)?.replace('px', '') + 'px',
         bottom: String(props.bottom)?.replace('px', '') + 'px',
         left:'100%',
-        transform:'translateX(-57px)',
+        transform:'translateX(-58px)',
         margin: '0',
         fontFamily: 'Helvetica,Arial,sans-serif',
         fontSize: '24px',
@@ -67,7 +67,8 @@ function ribbonsType(props: Props) {
         borderRadius: '0 2px 2px 0',
         transition: 'transform .4s ease',
         textDecoration: 'none',
-        color: '#fff'
+        color: '#fff',
+        whiteSpace:'nowrap'
       }}
 
     >
@@ -88,15 +89,17 @@ function ribbonsType(props: Props) {
           backgroundColor: props.color,
           top: String(props.top)?.replace('px', '') + 'px',
           bottom: String(props.bottom)?.replace('px', '') + 'px',
-          left: '-100px',
+          left: '0',
+          transform:'translateX(calc(-100% + 58px))',
           margin: '0',
           fontFamily: 'Helvetica,Arial,sans-serif',
           fontSize: '24px',
           padding: '10px 15px',
           borderRadius: '0 2px 2px 0',
-          transition: 'left .4s ease',
+          transition: 'transform .4s ease',
           textDecoration: 'none',
-          color: '#fff'
+          color: '#fff',
+          whiteSpace:'nowrap'
         }}
       >
         <span class="pointer-events-none">{props.content || 'Fork me'}</span>
@@ -113,16 +116,17 @@ function ribbonsType(props: Props) {
     if(type === 'right')
       el.style['transform'] = 'translateX(-100%)'
     else 
-      el.style[type] = '0'
+      el.style['transform'] = 'translateX(0)'
+    
   }
   function mouseout(e: MouseEvent, type: 'left' | 'right') {
     const el = e.target as HTMLElement
     if (!el) return
 
     if(type==='right')
-      el.style['transform'] = 'translateX(-56px)'
+      el.style['transform'] = 'translateX(-58px)'
     else
-      el.style[type] = '-103px'
+      el.style['transform'] = 'translateX(calc(-100% + 58px))'
   }
 }
 
