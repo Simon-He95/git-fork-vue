@@ -1,15 +1,17 @@
 // vite.config.js
 import { resolve } from 'node:path'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import vitePluginInspectorLibCss from 'unplugin-inspector-lib-css/vite'
 import { defineConfig } from 'vite'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   build: {
+    cssCodeSplit: true,
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: [
+        resolve(__dirname, 'src/index.ts'),
+      ],
       name: 'index',
       fileName: 'index',
     },
@@ -30,6 +32,5 @@ export default defineConfig({
     vueJsx(),
     dts(),
     cssInjectedByJsPlugin(),
-    vitePluginInspectorLibCss(),
   ],
 })

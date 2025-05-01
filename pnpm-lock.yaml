@@ -36,9 +36,6 @@ importers:
       typescript:
         specifier: ^4.9.5
         version: 4.9.5
-      unplugin-inspector-lib-css:
-        specifier: ^0.0.14
-        version: 0.0.14(rollup@4.40.1)
       vite:
         specifier: ^6.3.4
         version: 6.3.4(@types/node@17.0.45)(jiti@2.4.2)(yaml@2.7.1)
@@ -1001,18 +998,8 @@ packages:
     resolution: {integrity: sha512-9gpFRcTBSGDZKbYAIDINb5kk8iObe/Se4D6upqMpdACt1QmDucVQyGr6F2Pq0Yfv/xujIsRuInweApQRAcc1Sg==}
     engines: {node: '>=14'}
 
-  '@unocss/config@0.61.0':
-    resolution: {integrity: sha512-k8uV4n8eMti4S6BFeAkc9QBXJefDIlPyOWrdKykUMOHLIWVAIS53JixW9FJNgJRw0RVI6B7UR+rOznWwKpORPA==}
-    engines: {node: '>=14'}
-
   '@unocss/core@0.29.6':
     resolution: {integrity: sha512-u54ctWQ23sjb3cuypFr7pXPGhOkXJtn1/cdUT31Odgdau0FXlr+zEqJEvVUvYlfLbTD4W2W11r5F3F8dw25UMw==}
-
-  '@unocss/core@0.61.0':
-    resolution: {integrity: sha512-Y/Ly3LPIAzOBlWCdKBVzVzIaaWDsf+oWPIUZlaW7DL++WWypVBCghmxXIT5dyuMGXE560Hj92st4AkXfuVdxGQ==}
-
-  '@unocss/core@66.1.0-beta.13':
-    resolution: {integrity: sha512-kf5QIlReypn5dE18CqaEP7pRQlSoVP0O+Y3Y0nSF6U/TU9eB4InDhLfZF1PzjgR2EWQIaqnVTFNtAN52uJIFYQ==}
 
   '@unocss/inspector@0.29.6':
     resolution: {integrity: sha512-u51cx2lenZXqglQywRkyXvsjqRGFxZp1voncCHXGoccWDDziYyEgZAy4oc2mcnEvKv2pjW08VU/WtHjo+uYAGA==}
@@ -3797,9 +3784,6 @@ packages:
       '@vueuse/core':
         optional: true
 
-  unplugin-inspector-lib-css@0.0.14:
-    resolution: {integrity: sha512-2Of45zqsJUE8WNkM6kGz4syjJjEcBfMJdW7QJkJ+8gLSKvKytQ1o4LxRMQZMzow5Y0J6CplEeJ/PoxPGhf2v9A==}
-
   unplugin-vue-components@0.18.5:
     resolution: {integrity: sha512-VPA6z/4pcKRDYtWu1H+FIpV0MADlFKG3q7YMVFzNFC3EhMVZ4WuBJ76490oKyauguNw1T1obLCuxNU9JzJ0oAQ==}
     engines: {node: '>=14'}
@@ -3829,10 +3813,6 @@ packages:
         optional: true
       webpack:
         optional: true
-
-  unplugin@1.16.1:
-    resolution: {integrity: sha512-4/u/j4FrCKdi17jaxuJA0jClGxB1AvU2hw/IuayPc4ay1XGaJs/rbb4v5WKwAjNifjmXK9PIFyuPiaK8azyR9w==}
-    engines: {node: '>=14.0.0'}
 
   unrs-resolver@1.7.2:
     resolution: {integrity: sha512-BBKpaylOW8KbHsu378Zky/dGh4ckT/4NW/0SHRABdqRLcQJ2dAOjDo9g97p04sWflm0kqPqpUatxReNV/dqI5A==}
@@ -4037,9 +4017,6 @@ packages:
 
   webpack-virtual-modules@0.4.6:
     resolution: {integrity: sha512-5tyDlKLqPfMqjT3Q9TAqf2YqjwmnUleZwzJi1A5qXnlBCdj2AtOJ6wAWdglTIDOPgOiOrXeBeFcsQ8+aGQ6QbA==}
-
-  webpack-virtual-modules@0.6.2:
-    resolution: {integrity: sha512-66/V2i5hQanC51vBQKPH4aI8NMAcBW59FVBs+rC7eGHupMyfn34q7rZIE+ETlJ+XTevqfUhVVBgSUNSW2flEUQ==}
 
   whatwg-encoding@2.0.0:
     resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}
@@ -5182,16 +5159,7 @@ snapshots:
       '@unocss/core': 0.29.6
       unconfig: 0.3.13
 
-  '@unocss/config@0.61.0':
-    dependencies:
-      '@unocss/core': 0.61.0
-      unconfig: 0.3.13
-
   '@unocss/core@0.29.6': {}
-
-  '@unocss/core@0.61.0': {}
-
-  '@unocss/core@66.1.0-beta.13': {}
 
   '@unocss/inspector@0.29.6':
     dependencies:
@@ -8607,15 +8575,6 @@ snapshots:
       - vite
       - webpack
 
-  unplugin-inspector-lib-css@0.0.14(rollup@4.40.1):
-    dependencies:
-      '@rollup/pluginutils': 5.1.4(rollup@4.40.1)
-      '@unocss/config': 0.61.0
-      '@unocss/core': 66.1.0-beta.13
-      unplugin: 1.16.1
-    transitivePeerDependencies:
-      - rollup
-
   unplugin-vue-components@0.18.5(@babel/parser@7.27.1)(@babel/traverse@7.27.1)(esbuild@0.25.3)(rollup@2.79.2)(vite@6.3.4(@types/node@17.0.45)(jiti@2.4.2)(yaml@2.7.1))(vue@3.5.13(typescript@4.9.5)):
     dependencies:
       '@antfu/utils': 0.5.2
@@ -8647,11 +8606,6 @@ snapshots:
       esbuild: 0.25.3
       rollup: 2.79.2
       vite: 6.3.4(@types/node@17.0.45)(jiti@2.4.2)(yaml@2.7.1)
-
-  unplugin@1.16.1:
-    dependencies:
-      acorn: 8.14.1
-      webpack-virtual-modules: 0.6.2
 
   unrs-resolver@1.7.2:
     dependencies:
@@ -8887,8 +8841,6 @@ snapshots:
   webidl-conversions@7.0.0: {}
 
   webpack-virtual-modules@0.4.6: {}
-
-  webpack-virtual-modules@0.6.2: {}
 
   whatwg-encoding@2.0.0:
     dependencies:

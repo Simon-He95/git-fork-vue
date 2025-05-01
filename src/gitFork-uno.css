@@ -1,0 +1,58 @@
+/* For .fixed */
+.fixed { position: fixed; }
+
+/* For .z-1, .z-2 */
+.z-1 { z-index: 1; }
+.z-2 { z-index: 2; }
+
+/* For .flex, .items-center, .justify-center */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+
+/* For .top-0, .right-0, .left-0 */
+.top-0 { top: 0; }
+.right-0 { right: 0; }
+.left-0 { left: 0; }
+
+/* For .border-0 */
+.border-0 { border: 0; }
+
+/* For .github-corner (custom, not in unocss) */
+.github-corner { }
+
+/* For .pointer-events-none */
+.pointer-events-none { pointer-events: none; }
+
+/* For .h-10, .w-40, .h-40 */
+.h-10 { height: 2.5rem; }
+.w-40 { width: 10rem; }
+.h-40 { height: 10rem; }
+
+/* For .text-5 */
+.text-5 { font-size: 1.25rem; }
+
+/* For .rotate-y-10 (custom, not in unocss) */
+.rotate-y-10 { transform: rotateY(10deg); }
+
+/* For .box-border */
+.box-border { box-sizing: border-box; }
+
+/* For .py1 */
+.py1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+
+/* For .text-white */
+.text-white { color: #fff; }
+
+/* For .font-sans */
+.font-sans { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+
+/* For .transition-all-200 */
+.transition-all-200 { transition: all 0.2s; }
+
+/* For .text-center */
+.text-center { text-align: center; }
+
+/* For hover="text-shadow-md text-shadow-color-light" (custom, not in unocss) */
+.text-shadow-md:hover { text-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.text-shadow-color-light:hover { text-shadow: 0 4px 6px rgba(255,255,255,0.3); }

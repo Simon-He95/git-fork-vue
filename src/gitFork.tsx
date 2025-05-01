@@ -4,6 +4,7 @@ import type { Props } from './types'
 
 import { defineComponent } from 'vue'
 import './index.css'
+import './gitFork-uno.css'
 
 export const gitForkVue = defineComponent({
   name: 'Component',
