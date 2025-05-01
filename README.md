@@ -10,7 +10,7 @@
 </div>
 
 ## 目的
-提供一个跳转到GitHub地址的小组件 
+提供一个跳转到GitHub地址的小组件
 
 ## 灵感来源
 - [github-corners](https://tholman.com/github-corners/)
@@ -19,18 +19,17 @@
 ## 参数
 ```typescript
 export interface Props {
-  link: string ## GitHub地址
-  position: 'left' | 'right' ## 组件位置
-  content: string ## 组件内容
-  color: string ## 组件背景颜色
-  type: 'corners' | 'ribbons' | 'trapeziumType' ## 提供3种类型的组件
+  link: string // GitHub地址
+  position: 'left' | 'right' // 组件位置
+  content: string // 组件内容
+  color: string // 组件背景颜色
+  type: 'corners' | 'ribbons' | 'trapeziumType' // 提供3种类型的组件
 }
 ```
 
 ## 引入
 ```js
-import gitForkVue from "@simon_he/git-fork-vue";
-
+import gitForkVue from '@simon_he/git-fork-vue'
 ```
 
 ## 使用
@@ -42,16 +41,14 @@ import gitForkVue from "@simon_he/git-fork-vue";
     />
 ```
 
-## :coffee: 
+## :coffee:
 <a href="https://github.com/Simon-He95/sponsor" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
-
 
 ## :question: 问题
 [issues](https://github.com/Simon-He95/git-fork-vue/issues)
 
 ## 依赖
-`vue`、`unocss`、[`vite-plugin-inspector-lib-css`](https://github.com/Simon-He95/vite-plugin-Inspector-lib-css)
-
+`vue`、`unocss`、[`unplugin-inspector-lib-css`](https://github.com/Simon-He95/unplugin-inspector-lib-css)
 
 ## react版本
 [`@simon_he/git-fork-react`](https://github.com/Simon-He95/git-fork-react)

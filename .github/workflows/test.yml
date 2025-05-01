@@ -47,4 +47,3 @@ jobs:
         run: pnpm run test
 
       - run: npx changelogithub
-

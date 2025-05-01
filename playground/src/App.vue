@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 </script>
+
 <template>
   <main font-sans p="x-4 y-10" text="center gray-700 dark:gray-200">
     <git-fork
@@ -17,7 +18,7 @@
       top="150"
       content="Fork Me"
     />
-  
+
     <git-fork
       link="https://github.com/Simon-He95"
       type="ribbons"

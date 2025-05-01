@@ -1,6 +1,6 @@
+import routes from 'virtual:generated-pages'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import routes from 'virtual:generated-pages'
 // import gitForkInVue from '@simon_he/git-fork-vue'
 import gitForkInVue from '../../src'
 import App from './App.vue'

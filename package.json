@@ -1,7 +1,8 @@
 {
   "name": "@simon_he/git-fork-vue",
+  "type": "module",
   "version": "0.0.12",
-  "packageManager": "pnpm@6.32.3",
+  "packageManager": "pnpm@10.10.0",
   "description": "git-fork",
   "author": "Simon He",
   "license": "MIT",
@@ -19,12 +20,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.umd.js",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.js"
     }
   },
   "main": "./dist/index.umd.js",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
@@ -35,7 +36,6 @@
     "play:build": "pnpm run -C playground build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "vue-tsc --noEmit",
     "test": "vitest --dir test -u",
     "ptest": "pnpm run -C playground test -u",
     "preview": "pnpm run -C playground preview",
@@ -44,29 +44,21 @@
     "release": "bumpp --commit --tag --push && git push origin --tags -f && npm publish"
   },
   "dependencies": {
-    "@vueuse/core": "^8.1.1",
-    "vue": "^3.2.36"
+    "@vueuse/core": "^8.9.4",
+    "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.25.2",
-    "@simon_he/git-fork": "^0.1.4",
-    "@simon_he/git-fork-vue": "^0.0.6",
-    "@types/node": "^17.0.38",
-    "@unocss/inspector": "^0.45.21",
-    "@unocss/vite": "^0.45.21",
-    "@vitejs/plugin-vue": "^3.0.1",
-    "@vitejs/plugin-vue-jsx": "^2.0.0",
-    "bumpp": "^7.1.1",
-    "eslint": "^8.16.0",
-    "eslint-plugin-n": "^15.2.1",
-    "pkgroll": "^1.3.1",
-    "typescript": "^4.7.2",
-    "unocss": "^0.29.2",
-    "vite": "^3.1.3",
-    "vite-plugin-css-injected-by-js": "^2.1.0",
-    "vite-plugin-dts": "^1.5.0",
-    "vite-plugin-inspector-lib-css": "^0.0.2",
-    "vite-plugin-lib-insert-unocss": "^0.0.1",
-    "vitest": "^0.13.1"
+    "@antfu/eslint-config": "^4.12.0",
+    "@types/node": "^17.0.45",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vitejs/plugin-vue-jsx": "^2.1.1",
+    "bumpp": "^7.2.0",
+    "eslint": "^9.25.1",
+    "typescript": "^4.9.5",
+    "unplugin-inspector-lib-css": "^0.0.13",
+    "vite": "^6.3.4",
+    "vite-plugin-css-injected-by-js": "^2.4.0",
+    "vite-plugin-dts": "^1.7.3",
+    "vitest": "^3.1.2"
   }
 }
