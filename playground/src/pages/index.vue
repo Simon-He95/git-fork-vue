@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const name = $ref('')
+const name = ref('')
 
 const router = useRouter()
 function go() {
-  if (name)
-    router.push(`/hi/${encodeURIComponent(name)}`)
+  if (name.value)
+    router.push(`/hi/${encodeURIComponent(name.value)}`)
 }
 </script>
 
@@ -39,7 +39,7 @@ function go() {
 
     <div>
       <button
-        class="m-3 text-sm btn"
+        class="m3 text-sm btn"
         :disabled="!name"
         @click="go"
       >

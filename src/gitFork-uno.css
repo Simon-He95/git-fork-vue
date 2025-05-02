@@ -16,6 +16,19 @@
 .w-40 { width: 10rem; }
 .h-40 { height: 10rem; }
 .w-\[150\%\] { width: 150%; }
+.w-screen { width: 100vw; }
+.m-0 { margin: 0; }
+.p-0 { padding: 0; }
+.cursor-pointer { cursor: pointer; }
+.l-0 { left: 0; }
+.r-0 { right: 0; }
+.b-0 { bottom: 0; }
+.t-0 { top: 0; }
+.whitespace-nowrap { white-space: nowrap; }
+.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+
 
 /* 字体与颜色 */
 .text-5 { font-size: 1.25rem; }
@@ -39,3 +52,6 @@
 
 /* 其它自定义 */
 .github-corner { /* 可根据需要补充 */ }
+.decoration-none{
+  text-decoration: none;
+}
