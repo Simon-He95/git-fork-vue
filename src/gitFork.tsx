@@ -55,7 +55,7 @@ function ribbonsType(props: Props) {
           href={props.link}
           onMouseover={e => mouseover(e, 'right')}
           onMouseout={e => mouseout(e, 'right')}
-          class="fixed z-1 flex items-center"
+          class="fixed z-[9999] flex items-center"
           style={{
             backgroundColor: props.color,
             top: `${String(props.top)?.replace('px', '')}px`,
@@ -86,7 +86,7 @@ function ribbonsType(props: Props) {
           href={props.link}
           onMouseover={e => mouseover(e, 'left')}
           onMouseout={e => mouseout(e, 'left')}
-          class="fixed z-1 flex items-center"
+          class="fixed z-[9999] flex items-center"
           style={{
             backgroundColor: props.color,
             top: `${String(props.top)?.replace('px', '')}px`,
@@ -138,7 +138,7 @@ function cornersType(props: Props): any {
     ? (
         <a
           id="gitFork"
-          class="fixed top-0 z-1 right-0 border-0 z-1 github-corner"
+          class="fixed top-0 z-[9999] right-0 border-0 z-[9999] github-corner"
           href={props.link}
           aria-label="View source on GitHub"
         >
@@ -146,9 +146,9 @@ function cornersType(props: Props): any {
             width="80"
             height="80"
             viewBox="0 0 250 250"
+            class="text-white"
             style={{
               fill: props.color,
-              color: '#fff',
             }}
             aria-hidden="true"
           >
@@ -163,7 +163,7 @@ function cornersType(props: Props): any {
     : (
         <a
           id="gitFork"
-          class="fixed top-0 z-1 left-0 border-0 z-1 github-corner"
+          class="fixed top-0 z-[9999] left-0 border-0 z-[9999] github-corner"
           href={props.link}
           aria-label="View source on GitHub"
         >
@@ -191,25 +191,21 @@ function cornersType(props: Props): any {
 function trapeziumType(props: Props): any {
   return () => props.position === 'right'
     ? (
-        <a href={props.link} class="fixed z-2 top-0 right-0 w-40 h-40 bg-transparent">
+        <a href={props.link} class="fixed z-[9999] top-0 right-0 w-40 h-40 bg-transparent pointer-events-none">
           <div
-            class="h-10 flex items-center justify-center text-5 rotate-y-10 box-border py1 text-white font-sans transition-all-200"
-            hover="text-shadow-md text-shadow-color-light"
+            class="w-[150%] text-center hover:text-shadow-md hover:text-shadow-color-light h-10 flex items-center justify-center text-5 rotate-y-10 box-border py1 text-white font-sans transition-all-200 pointer-events-all"
             style={{
-              'width': '150%',
               'transform': 'translate3d(-10%, 120%, 0) rotate(45deg)',
               '-webkit-font-smoothing': 'antialiased',
               '-moz-osx-font-smoothing': 'grayscale',
-              'textAlign': 'center',
             }}
           >
             <div
+              class="w-[150%] pointer-events-none"
               style={{
-                width: '150%',
                 border: '0.5rem double white',
                 background: props.color,
               }}
-              pointer-events-none
             >
               {props.content || 'Fork me on GitHub'}
             </div>
@@ -217,22 +213,21 @@ function trapeziumType(props: Props): any {
         </a>
       )
     : (
-        <a href={props.link} class="fixed top-0 z-2 left-0 w-40 h-40 bg-transparent text-center">
+        <a href={props.link} class="fixed top-0 z-[9999] left-0 w-40 h-40 bg-transparent text-center">
           <div
-            hover="text-shadow-md text-shadow-color-light"
-            class="h-10 flex items-center  justify-center text-5 rotate-y-10 box-border py1 text-white font-sans transition-all-200"
+            class="hover:text-shadow-color-light hover:text-shadow-md h-10 flex items-center  justify-center text-5 rotate-y-10 box-border py1 text-white font-sans transition-all-200 w-[150%]"
             style={{
-              'width': '150%',
               'transform': 'translate3d(-21%, 117%, 0) rotate(-45deg)',
               '-webkit-font-smoothing': 'antialiased',
               '-moz-osx-font-smoothing': 'grayscale',
             }}
           >
-            <div style={{
-              width: '150%',
-              border: '0.5rem double white',
-              background: props.color,
-            }}
+            <div
+              class="w-[150%]"
+              style={{
+                border: '0.5rem double white',
+                background: props.color,
+              }}
             >
               {props.content || 'Fork me on GitHub'}
             </div>
