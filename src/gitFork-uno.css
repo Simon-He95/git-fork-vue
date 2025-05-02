@@ -15,7 +15,7 @@
 .h-10 { height: 2.5rem; }
 .w-40 { width: 10rem; }
 .h-40 { height: 10rem; }
-.w-\[150%\] { width: 150%; }
+.w-\[150\%\] { width: 150%; }
 
 /* 字体与颜色 */
 .text-5 { font-size: 1.25rem; }
