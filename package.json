@@ -1,7 +1,7 @@
 {
   "name": "@simon_he/git-fork-vue",
   "type": "module",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "packageManager": "pnpm@10.10.0",
   "description": "git-fork",
   "author": "Simon He",
