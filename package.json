@@ -3,19 +3,48 @@
   "type": "module",
   "version": "0.0.18",
   "packageManager": "pnpm@10.10.0",
-  "description": "git-fork",
-  "author": "Simon He",
+  "description": "Beautiful, customizable GitHub fork badges for Vue 3 applications. Features 3 stylish designs (corners, ribbons, trapezium) with flexible positioning and full customization options.",
+  "author": {
+    "name": "Simon He",
+    "url": "https://github.com/Simon-He95"
+  },
   "license": "MIT",
+  "homepage": "https://git-fork-vue.vercel.app",
   "repository": {
     "type": "git",
-    "url": "git + git@github.com:Simon-He95/git-fork-vue.git"
+    "url": "git+https://github.com/Simon-He95/git-fork-vue.git"
   },
   "bugs": {
     "url": "https://github.com/Simon-He95/git-fork-vue/issues"
   },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/Simon-He95/sponsor"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "keywords": [
-    "git-fork-vue",
-    "vue"
+    "vue",
+    "vue3",
+    "github",
+    "github-fork",
+    "github-badge",
+    "github-ribbon",
+    "github-corners",
+    "fork-badge",
+    "git-fork",
+    "vue-component",
+    "typescript",
+    "ui-component",
+    "web-component",
+    "badge",
+    "ribbon",
+    "corners",
+    "trapezium",
+    "customizable",
+    "responsive",
+    "frontend"
   ],
   "exports": {
     ".": {
